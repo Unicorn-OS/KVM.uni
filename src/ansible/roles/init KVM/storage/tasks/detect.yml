@@ -1,3 +1,6 @@
-# detect SSD: https://www.makeuseof.com/ram-vs-ssd/
+# detect SSD:
 # - sch: https://www.google.com/search?q=bash+is+ssd+or+hard+drive
+# - https://www.makeuseof.com/ram-vs-ssd/
+
+# disk info:
 # https://stackoverflow.com/questions/48036051/ansible-using-ansible-facts-how-can-i-get-a-disk-device-based-on-the-storage-c
