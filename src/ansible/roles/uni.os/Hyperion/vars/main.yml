@@ -1,0 +1,11 @@
+uni_root: ".uni"
+
+hyper_root: "{{ uni_root }}/hyper"
+
+hyper_dirs:
+- bac/kvm
+- driver
+- iso
+- os/index
+- vm/kvm
+- vm/vagrant

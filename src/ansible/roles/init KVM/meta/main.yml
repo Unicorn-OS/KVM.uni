@@ -1,0 +1,5 @@
+---
+dependencies:
+  - uni.os/Hyperion
+  - uni.os/Singularity
+# - .fn/reboot

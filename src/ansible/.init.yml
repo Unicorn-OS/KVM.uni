@@ -1,0 +1,22 @@
+- name: Initialize vars
+  hosts: localhost
+  vars:
+    vars_dir: "{{ playbook_dir }}/vars"
+    var_file:
+      - debug
+      - Env
+  tasks:
+
+    - name: Copy vars
+      ansible.builtin.copy:
+        src: "{{ vars_dir }}/{{ item }}.yml.default"
+        dest: "{{ vars_dir }}/{{ item }}.yml"
+        mode: '0644'
+      loop: "{{ var_file }}"
+
+  handlers:
+    - name: Gitignore
+      ansible.builtin.lineinfile:
+        path: "{{ vars_dir }}/.gitignore"
+        line: "{{ item }}"
+      loop: "{{ var_file }}"
