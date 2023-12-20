@@ -1,0 +1,6 @@
+- name: Detect storage characteristics
+  include_tasks: detect.yml
+
+- ansible.builtin.include_role:
+    name: "{{ role_path }}/local filesystem"
+  when: fast_local_storage

@@ -1,0 +1,6 @@
+- name: Create .uni/Singularity directory
+  ansible.builtin.file:
+    path: "{{ singularity_root }}/{{ item }}"
+    state: directory
+    mode: '0755'
+  loop: "{{ singularity_dirs }}"

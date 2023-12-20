@@ -1,0 +1,8 @@
+- debug:
+    msg: "Hello Uni Hyperion! {{ local_iso_pool }}"
+
+# - name: Define a new storage pool
+#   community.libvirt.virt_pool:
+#     command: define
+#     name: vms
+#     xml: '{{ lookup("template", "pool/dir.xml.j2") }}'

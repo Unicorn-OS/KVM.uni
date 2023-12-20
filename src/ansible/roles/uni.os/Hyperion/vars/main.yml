@@ -1,11 +1,15 @@
-uni_root: ".uni"
+iso_dir: os/iso
+
+home_dir: "{{ ansible_env.HOME }}"
+
+uni_root: "{{ home_dir }}/.uni"
 
 hyper_root: "{{ uni_root }}/hyper"
 
 hyper_dirs:
 - bac/kvm
-- driver
-- iso
+- os/driver
+- "{{ iso_dir }}"
 - os/index
 - vm/kvm
 - vm/vagrant

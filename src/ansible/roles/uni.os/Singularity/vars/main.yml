@@ -1,0 +1,6 @@
+singularity_root: "{{ uni_root }}/singularity"
+
+singularity_dirs:
+- game
+- game/image/kvm
+- steam-backup

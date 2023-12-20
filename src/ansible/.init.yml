@@ -9,14 +9,17 @@
 
     - name: Copy vars
       ansible.builtin.copy:
-        src: "{{ vars_dir }}/{{ item }}.yml.default"
+        src: "{{ vars_dir }}/.template/{{ item }}.yml.default"
         dest: "{{ vars_dir }}/{{ item }}.yml"
         mode: '0644'
       loop: "{{ var_file }}"
+      notify: Gitignore
 
   handlers:
     - name: Gitignore
       ansible.builtin.lineinfile:
         path: "{{ vars_dir }}/.gitignore"
-        line: "{{ item }}"
+        line: "{{ item }}.yml"
+        create: true
+        mode: '0644'
       loop: "{{ var_file }}"

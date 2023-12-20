@@ -1,5 +1,3 @@
----
 dependencies:
-  - uni.os/Hyperion
-  - uni.os/Singularity
-# - .fn/reboot
+  - uni.os
+  - init KVM/storage
